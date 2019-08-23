@@ -19,24 +19,44 @@ var guessesRemain = 9;
 // game function
 
 // start Game
-function newGame(){
+function newGame() {
   // computers answer from answer
-  theWord = answer[Math.floor(Math.random()*answer.length)];
+  theWord = answer[Math.floor(Math.random() * answer.length)];
   console.log(theWord);
   // grab theWord and split it up to each letter
-   theWordLtrs =currentWord.split("");
-   console.log(theWordLtrs);
-   // get number of letters from the word
-   underScores = theWordLtrs.length;
-   console.log(underScores);
+  theWordLtrs = currentWord.split("");
+  console.log(theWordLtrs);
+  // get number of letters from the word
+  underScores = theWordLtrs.length;
+  console.log(underScores);
 
-   // game reset variables
-   guessesRemain = 9;
-   wrongLtrs = [];
-   answerDisplay = [];
+  // game reset variables
+  guessesRemain = 9;
+  wrongLtrs = [];
+  answerDisplay = [];
 
-   // reset images
-   if(guessesRemain =9){
-     document.getElementById('homerunImg').removeAttribute('style');
-   }
+  // reset images
+  if (guessesRemain = 9) {
+    document.getElementById('homerunImg').removeAttribute('style');
+    document.getElementById('playerImg').removeAttribute('style');
+    document.getElementById('hotDogImg').removeAttribute('style');
+    document.getElementById('batGloveImg').removeAttribute('style');
+    document.getElementById('gloveImg').removeAttribute('style');
+    document.getElementById('stadiumImg').removeAttribute('style');
+    document.getElementById('baseballImg').removeAttribute('style');
+    document.getElementById('batBallImg').removeAttribute('style');
+  }
+
+  // underscores for blank letters
+  for (i = 0; i < underScores; i++) {
+    answerDisplay.push("_");
+    console.log(answerDisplay);
+  }
+  // update html
+  document.getElementById('currentWord').innerHTML = answerDisplay.join(" ");
+  document.getElementById('remainingGuesses').innerHTML = "Guesses Remaining:" + guessesRemain;
+  document.getElementById('wins').innerHTML = "Wins:" + " " + wins;
+  document.getElementById('losses').innerHTML = "Losses:" + "" + losses;
+
+
 }
