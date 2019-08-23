@@ -1,5 +1,5 @@
 // answer
-var answer = ['ruth', 'mantel', 'dimaggio', 'jeter', 'rivera'];
+var answer = ['ruth', 'mantel', 'dimaggio', 'jeter', 'rivera','judge','williams','posada','berra','gehrig'];
 // the word guessed as string
 var theWord = "";
 // array to hold letters in theWord
@@ -152,42 +152,34 @@ function roundComplete() {
 
 		//Game interation with the images (Guesses Left, as displayed by images)
 		if (guessesRemain <= 8) {
-			document.getElementById("homerunImg").style.transform = "rotate(180deg)";
 			document.getElementById("homerunImg").style.opacity = "0.25";
 		}
 
 		if (guessesRemain <= 7) {
-			document.getElementById("playerImg").style.transform = "rotate(180deg)";
 			document.getElementById("playerImg").style.opacity = "0.25";
 		}
 
 		if (guessesRemain <= 6) {
-			document.getElementById("hotDogImg").style.transform = "rotate(180deg)";
 			document.getElementById("hotDogImg").style.opacity = "0.25";
 		}
 
 		if (guessesRemain <= 5) {
-			document.getElementById("batGloveImg").style.transform = "rotate(180deg)";
 			document.getElementById("batGloveImg").style.opacity = "0.25";
 		}
 
 		if (guessesRemain <= 4) {
-			document.getElementById("gloveImg").style.transform = "rotate(180deg)";
 			document.getElementById("gloveImg").style.opacity = "0.25";
 		}
 
 		if (guessesRemain <= 3) {
-			document.getElementById("stadiumImg").style.transform = "rotate(180deg)";
 			document.getElementById("stadiumImg").style.opacity = "0.25";
 		}
 
 		if (guessesRemain <= 2) {
-			document.getElementById("baseballImg").style.transform = "rotate(180deg)";
 			document.getElementById("baseballImg").style.opacity = "0.25";
 		}
 
 		if (guessesRemain <= 1) {
-			document.getElementById("batBallImg").style.transform = "rotate(180deg)";
 			document.getElementById("batBallImg").style.opacity = "0.25";
 		}
 

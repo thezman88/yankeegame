@@ -4,25 +4,26 @@
 <head>
   <meta charset="utf-8">
   <title>Yankee Guess Game</title>
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
   <!-- title container -->
-  <div class="container-fluid">
+  <div class="container-fluid"id="title">
     <div class="row text-center">
-      <div class="col border">
-        <h3 Display-3>Guess The Yankee </h3>
+      <div class="col">
+        <h3 class="display-3"id="title">Guess The Yankee</h3>
       </div>
     </div>
   </div>
   <!-- game box -->
-  <div class="container">
+  <div class="container-fluid bg-secondary text-white">
     <div class="row">
-      <div class="col-6 border">
+      <div class="col-6">
         <!-- win section  -->
         <!-- <h3 class="ml-3">wins</h3> -->
-        <div class="display-4 ml-3" id="wins">
+        <div class="display-4 ml-3 text-" id="wins">
           0
         </div>
         <div class="col">
@@ -34,21 +35,20 @@
         </div>
       </div>
 
-      <div class="col-6 border">
+      <div class="col-6 text-center">
         <!-- current word  -->
         <h3>Current Word</h3>
         <!-- blanks -->
-        <div class="col border text-center" id="currentWord" style="font-size:2rem;">
+        <div class="col  text-center" id="currentWord" style="font-size:2rem;">
         _ _ _ _
         </div>
-        <div class="col border">
+        <div class="col">
           <!-- guesses remaining -->
-          <h3>number of guesses remaining</h3>
           <div class="display-4" id="remainingGuesses">
             9
           </div>
         </div>
-        <div class="col border">
+        <div class="col">
           <!-- letters guessed -->
           <h3>Letters Guessed</h3>
           <div class=""id="lettersGuessed">
@@ -128,6 +128,8 @@
   </div>
 
 </div>
+
+
 
 
 
