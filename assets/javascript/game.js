@@ -37,6 +37,6 @@ function newGame(){
 
    // reset images
    if(guessesRemain =9){
-     document.getElementById('')
+     document.getElementById('homerunImg').removeAttribute('style');
    }
 }
