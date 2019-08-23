@@ -93,7 +93,7 @@ function checkLtrs(letter) {
 
   } else { //If user input is not a letter from the alphabet
     // Alert the user
-    alert("Please be sure to select a letter from the Alphabet (from a to z)");
+    alert("Only letters from the Alphabet");
   }
 }
 function roundComplete() {
@@ -108,13 +108,12 @@ function roundComplete() {
 		//Check if the user won
 		if (theWordLtrs.toString() == answerDisplay.toString()) {
 			wins++;
-			alert("Theeeee Yankees Win! You got '" + theWord + "' correctly. Try another round?");
+			alert("Theeeee Yankees Win! You got " + theWord + " Try another round?");
 			console.log("YOU WIN!");
 
-			// Update the wins in the HTML doc
 			document.getElementById("wins").innerHTML = "Wins: " + " " + wins;
 
-			//Start New Game and clear letters already guessed
+			//Start New Game
 			newGame();
 			document.getElementById("lettersGuessed").innerHTML = "Letters Already Guessed:" + " " + " ";
 
@@ -123,7 +122,7 @@ function roundComplete() {
 			alert("You have 0 guesses left,Your Out!. The word was '" + theWord + "'. Do you want to try again?")
 			console.log("You Lost!");
 
-			// Update the wins in the HTML doc
+			//  wins in the HTML
 			document.getElementById("losses").innerHTML = "Losses: " + " " + losses;
 
 			//Start New Game
@@ -134,13 +133,11 @@ function roundComplete() {
 	}
 
 
-  // MAIN PROCESS
-//=============
 
-	//Call function to start the game for the first time
+	//start the game
 	newGame();
 
-	//Get input from user on what keys are being pressed
+	// what keys are being pressed
 	document.onkeyup = function(event) {
 		//Create a variable to hold all the letters that have been guessed
 		var ltrsGuessed = String.fromCharCode(event.keyCode).toLowerCase();
@@ -150,7 +147,7 @@ function roundComplete() {
 		checkLtrs(ltrsGuessed);
 		roundComplete();
 
-		//Game interation with the images (Guesses Left, as displayed by images)
+		//Guesses left images
 		if (guessesRemain <= 8) {
 			document.getElementById("homerunImg").style.opacity = "0.25";
 		}
