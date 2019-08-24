@@ -181,3 +181,28 @@ function roundComplete() {
 		}
 
 	}
+
+
+  var x = document.getElementById("myAudio");
+
+function playAudio() {
+  x.play();
+}
+
+function pauseAudio() {
+  x.pause();
+
+}
+
+  // var audioElement = document.createElement("audio");
+  //     audioElement.setAttribute("src", "assets/organMusic.mp3");
+  //     // console.log(audioElement);
+  //     document.getElementById("musicControls").append(audioElement);
+  //
+  //     // document.getElementById("playMusic").on('click', function(){
+  //     //   var audio = document.getElementById("musicControls");
+  //     //   audio.play();
+  //     // })
+  //     function playAudio(){
+  //       audioElement.play();
+  //     }
